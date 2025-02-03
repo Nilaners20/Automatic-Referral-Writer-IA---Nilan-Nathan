@@ -89,6 +89,7 @@
             this.lblWrongCode.TabIndex = 12;
             this.lblWrongCode.Text = "Incorrect Code Entered";
             this.lblWrongCode.Visible = false;
+            this.lblWrongCode.Click += new System.EventHandler(this.lblWrongCode_Click);
             // 
             // LoginPage
             // 

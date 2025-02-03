@@ -41,6 +41,7 @@
             this.btnCreatePageBack2Home = new System.Windows.Forms.Button();
             this.txtFirstLastName = new System.Windows.Forms.TextBox();
             this.lblFirstLastName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNewReferral
@@ -159,6 +160,7 @@
             this.txtFirstLastName.Name = "txtFirstLastName";
             this.txtFirstLastName.Size = new System.Drawing.Size(423, 20);
             this.txtFirstLastName.TabIndex = 17;
+            this.txtFirstLastName.TextChanged += new System.EventHandler(this.txtFirstLastName_TextChanged);
             // 
             // lblFirstLastName
             // 
@@ -171,12 +173,26 @@
             this.lblFirstLastName.TabIndex = 18;
             this.lblFirstLastName.Text = "Student First and Last Name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(95, 326);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 22);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "REFERRAL HAS BEEN CREATED";
+            this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.lblRefCreation);
+            // 
             // CreateReferralPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFirstLastName);
             this.Controls.Add(this.txtFirstLastName);
             this.Controls.Add(this.btnCreatePageBack2Home);
@@ -190,7 +206,7 @@
             this.Controls.Add(this.txtEnterRefNum);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNewReferral);
-            this.Name = "CreateReferralPage";
+            
             this.Text = "CreateReferralPage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,5 +228,6 @@
         private System.Windows.Forms.Button btnCreatePageBack2Home;
         private System.Windows.Forms.TextBox txtFirstLastName;
         private System.Windows.Forms.Label lblFirstLastName;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -41,5 +41,10 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             
            
         }
+
+        private void lblWrongCode_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

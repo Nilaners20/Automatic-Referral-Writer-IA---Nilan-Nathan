@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +13,19 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 {
     public partial class CreateReferralPage : Form
     {
+        public static string name;
+        public static string RefNum;
+        public static string DateIss;
+        public static string Reason;
+        public static string Intv;
+        
+
         public CreateReferralPage()
         {
             InitializeComponent();
+
+
+            
         }
 
         private void txtEnterRefNum_Click(object sender, EventArgs e)
@@ -30,8 +41,29 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 
         private void btnCreateReferral_Click(object sender, EventArgs e)
         {
+            
+            name = this.txtFirstLastName.Text;
+            RefNum = this.txtEnterRefNum.Text;
+            DateIss = this.txtDateIssued.Text;
+            Reason = this.txtReason.Text;
+            Intv = this.txtIntervention.Text;
+
+            
+            
+            
             new FinalTextPage().Show();
             Hide();
         }
+
+        private void txtFirstLastName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        private void lblRefCreation(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
