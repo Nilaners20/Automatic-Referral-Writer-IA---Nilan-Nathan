@@ -52,6 +52,7 @@
             this.txtFinalText.Size = new System.Drawing.Size(650, 295);
             this.txtFinalText.TabIndex = 8;
             this.txtFinalText.Text = "";
+            this.txtFinalText.TextChanged += new System.EventHandler(this.txtFinalText_TextChanged);
             // 
             // btnFinalTextBackToHome
             // 
@@ -77,6 +78,7 @@
             this.btnCopyToClipboard.TabIndex = 18;
             this.btnCopyToClipboard.Text = "Copy Text to Clipboard";
             this.btnCopyToClipboard.UseVisualStyleBackColor = false;
+            this.btnCopyToClipboard.Click += new System.EventHandler(this.btnCopyToClipboard_Click);
             // 
             // FinalTextPage
             // 

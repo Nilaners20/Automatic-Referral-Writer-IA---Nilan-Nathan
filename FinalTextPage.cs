@@ -22,5 +22,23 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             new HomePage().Show();
             Hide();
         }
+
+        private void txtFinalText_TextChanged(object sender, EventArgs e)
+        {
+            if (CreateReferralPage.Intv == "Y")
+            {
+                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a for the following reason: " + CreateReferralPage.Reason + " Invervention has been handled by the teacher already. ";
+            }
+            else
+            {
+                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a for the following reason: " + CreateReferralPage.Reason;
+            }
+           
+        }
+
+        private void btnCopyToClipboard_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Clipboard.SetText(txtFinalText.Text);
+        }
     }
 }
