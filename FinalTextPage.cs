@@ -39,6 +39,13 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         private void btnCopyToClipboard_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Clipboard.SetText(txtFinalText.Text);
+            lblRefCreated.Visible = true;
+
+        }
+
+        private void lblRefCreated_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

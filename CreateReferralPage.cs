@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,18 +42,21 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 
         private void btnCreateReferral_Click(object sender, EventArgs e)
         {
-            
+            new FinalTextPage().Show();
+            Hide();
             name = this.txtFirstLastName.Text;
             RefNum = this.txtEnterRefNum.Text;
             DateIss = this.txtDateIssued.Text;
             Reason = this.txtReason.Text;
             Intv = this.txtIntervention.Text;
+        
 
-            
-            
-            
-            new FinalTextPage().Show();
-            Hide();
+            List<String> list = new List<string>(new string[] { name, RefNum, DateIss, Reason, Intv});
+            String json = Newtonsoft.Json.JsonConvert.SerializeObject(list);
+
+
+
+
         }
 
         private void txtFirstLastName_TextChanged(object sender, EventArgs e)
