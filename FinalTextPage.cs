@@ -27,11 +27,11 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         {
             if (CreateReferralPage.Intv == "Y")
             {
-                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a for the following reason: " + CreateReferralPage.Reason + " Invervention has been handled by the teacher already. ";
+                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a referral for the following reason: " + CreateReferralPage.Reason + " Invervention has been handled by the teacher already. ";
             }
             else
             {
-                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a for the following reason: " + CreateReferralPage.Reason;
+                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a referral for the following reason: " + CreateReferralPage.Reason;
             }
            
         }
@@ -39,7 +39,7 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         private void btnCopyToClipboard_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Clipboard.SetText(txtFinalText.Text);
-            lblRefCreated.Visible = true;
+            lblRefCopied.Visible = true;
 
         }
 

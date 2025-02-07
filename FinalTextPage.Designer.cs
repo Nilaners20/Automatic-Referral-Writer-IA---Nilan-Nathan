@@ -32,7 +32,7 @@
             this.txtFinalText = new System.Windows.Forms.RichTextBox();
             this.btnFinalTextBackToHome = new System.Windows.Forms.Button();
             this.btnCopyToClipboard = new System.Windows.Forms.Button();
-            this.lblRefCreated = new System.Windows.Forms.Label();
+            this.lblRefCopied = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFinalText
@@ -48,6 +48,7 @@
             // 
             // txtFinalText
             // 
+            this.txtFinalText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFinalText.Location = new System.Drawing.Point(98, 95);
             this.txtFinalText.Name = "txtFinalText";
             this.txtFinalText.Size = new System.Drawing.Size(650, 295);
@@ -81,18 +82,18 @@
             this.btnCopyToClipboard.UseVisualStyleBackColor = false;
             this.btnCopyToClipboard.Click += new System.EventHandler(this.btnCopyToClipboard_Click);
             // 
-            // lblRefCreated
+            // lblRefCopied
             // 
-            this.lblRefCreated.AutoSize = true;
-            this.lblRefCreated.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRefCreated.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRefCreated.Location = new System.Drawing.Point(308, 409);
-            this.lblRefCreated.Name = "lblRefCreated";
-            this.lblRefCreated.Size = new System.Drawing.Size(259, 22);
-            this.lblRefCreated.TabIndex = 20;
-            this.lblRefCreated.Text = "REFERRAL HAS BEEN CREATED";
-            this.lblRefCreated.Visible = false;
-            this.lblRefCreated.Click += new System.EventHandler(this.lblRefCreated_Click);
+            this.lblRefCopied.AutoSize = true;
+            this.lblRefCopied.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRefCopied.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRefCopied.Location = new System.Drawing.Point(308, 409);
+            this.lblRefCopied.Name = "lblRefCopied";
+            this.lblRefCopied.Size = new System.Drawing.Size(246, 22);
+            this.lblRefCopied.TabIndex = 20;
+            this.lblRefCopied.Text = "REFERRAL HAS BEEN COPIED";
+            this.lblRefCopied.Visible = false;
+            this.lblRefCopied.Click += new System.EventHandler(this.lblRefCreated_Click);
             // 
             // FinalTextPage
             // 
@@ -100,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblRefCreated);
+            this.Controls.Add(this.lblRefCopied);
             this.Controls.Add(this.btnCopyToClipboard);
             this.Controls.Add(this.btnFinalTextBackToHome);
             this.Controls.Add(this.txtFinalText);
@@ -118,6 +119,6 @@
         private System.Windows.Forms.RichTextBox txtFinalText;
         private System.Windows.Forms.Button btnFinalTextBackToHome;
         private System.Windows.Forms.Button btnCopyToClipboard;
-        private System.Windows.Forms.Label lblRefCreated;
+        private System.Windows.Forms.Label lblRefCopied;
     }
 }
