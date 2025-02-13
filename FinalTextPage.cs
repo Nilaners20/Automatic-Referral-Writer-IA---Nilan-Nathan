@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 {
     public partial class FinalTextPage : Form
     {
+        
+
+        
+
         public FinalTextPage()
         {
+            
             InitializeComponent();
+            
+
         }
 
         private void btnFinalTextBackToHome_Click(object sender, EventArgs e)
@@ -25,15 +33,8 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 
         private void txtFinalText_TextChanged(object sender, EventArgs e)
         {
-            if (CreateReferralPage.Intv == "Y")
-            {
-                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a referral for the following reason: " + CreateReferralPage.Reason + " Invervention has been handled by the teacher already. ";
-            }
-            else
-            {
-                txtFinalText.Text = "The student " + CreateReferralPage.name + " is receiving a referral for the following reason: " + CreateReferralPage.Reason;
-            }
-           
+            txtFinalText.Text = CreateReferralPage.FinalText;
+
         }
 
         private void btnCopyToClipboard_Click(object sender, EventArgs e)

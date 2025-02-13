@@ -8,10 +8,13 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 {
     public class Student
     {
-        public static string NAME { get; set; }
-        public static string REFNUM { get; set; }
-        public static string DATEISS { get; set; }
-        public static string REASON { get; set; }
-        public static string INTV { get; set; }
+        public  string NAME { get; set; }
+        public  string REFNUM { get; set; }
+        public  string DATEISS { get; set; }
+        public  string REASON { get; set; }
+        public  string INTV { get; set; }
     }
+
+    
+
 }

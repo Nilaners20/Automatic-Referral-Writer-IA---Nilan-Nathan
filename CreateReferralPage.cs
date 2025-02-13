@@ -10,21 +10,22 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Automatic_Referral_Writer_IA___Nilan_Nathan
 {
     public partial class CreateReferralPage : Form
     {
-        public static string name { get; set; }
-        public static string RefNum { get; set; }
-        public static string DateIss { get; set; }
-        public static string Reason { get; set; }
+        public string name { get; set; }
+        public string RefNum { get; set; }
+        public string DateIss { get; set; }
+        public string Reason { get; set; }
         public static string Intv { get; set; }
 
-        private  string JsonFilePath;
+        private string JsonFilePath;
 
-       
-
+        public static string FinalText;
+        public static string FINALTEXT;
 
 
         public CreateReferralPage()
@@ -32,7 +33,7 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             InitializeComponent();
 
 
-            
+
         }
 
         private void txtEnterRefNum_Click(object sender, EventArgs e)
@@ -55,18 +56,32 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             DateIss = this.txtDateIssued.Text;
             Reason = this.txtReason.Text;
             Intv = this.txtIntervention.Text;
-            Student student = new Student();
-            Student.NAME = name;
-            Student.REFNUM = RefNum;
-            Student.DATEISS = DateIss;
-            Student.INTV = Intv;
-            File.WriteAllText(@"c:\movie.json", JsonConvert.SerializeObject(movie));
+           
+            Student STUDENT = new Student 
+            {
+                NAME = name,
+                REFNUM = RefNum,
+                DATEISS = DateIss,
+                REASON = Reason,
+                INTV = Intv,
+            };
+            if (Intv == "Y")
+            {
+                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason + " Invervention has been handled by the teacher already. ";
+                Console.WriteLine(FinalText);
+            }
+            else
+            {
+                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason;
+                Console.WriteLine(FinalText);
+            }
+            FINALTEXT = FinalText;
 
-
-            List<String> list = new List<string>(new string[] { name, RefNum, DateIss, Reason, Intv});
-            String json = Newtonsoft.Json.JsonConvert.SerializeObject(list);
-            
-
+            //using (StreamWriter file = File.CreateText(@"c:\"+ name + ".json"))
+            // {
+            //     JsonSerializer serializer = new JsonSerializer();
+            //     serializer.Serialize(file, STUDENT);
+            // }
 
 
         }
