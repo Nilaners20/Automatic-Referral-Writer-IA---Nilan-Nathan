@@ -31,7 +31,7 @@
             this.lblFindStudent = new System.Windows.Forms.Label();
             this.btnStudentLookBacktoHome = new System.Windows.Forms.Button();
             this.boxFindStudent = new System.Windows.Forms.TextBox();
-            this.btnFoundStudent = new System.Windows.Forms.Button();
+            this.btnSearchStudent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblFindStudent
@@ -65,18 +65,20 @@
             this.boxFindStudent.Name = "boxFindStudent";
             this.boxFindStudent.Size = new System.Drawing.Size(465, 26);
             this.boxFindStudent.TabIndex = 13;
+            this.boxFindStudent.TextChanged += new System.EventHandler(this.boxFindStudent_TextChanged);
             // 
-            // btnFoundStudent
+            // btnSearchStudent
             // 
-            this.btnFoundStudent.BackColor = System.Drawing.Color.Crimson;
-            this.btnFoundStudent.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFoundStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFoundStudent.Location = new System.Drawing.Point(161, 229);
-            this.btnFoundStudent.Name = "btnFoundStudent";
-            this.btnFoundStudent.Size = new System.Drawing.Size(465, 45);
-            this.btnFoundStudent.TabIndex = 14;
-            this.btnFoundStudent.Text = "Student Name";
-            this.btnFoundStudent.UseVisualStyleBackColor = false;
+            this.btnSearchStudent.BackColor = System.Drawing.Color.Crimson;
+            this.btnSearchStudent.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearchStudent.Location = new System.Drawing.Point(161, 229);
+            this.btnSearchStudent.Name = "btnSearchStudent";
+            this.btnSearchStudent.Size = new System.Drawing.Size(465, 45);
+            this.btnSearchStudent.TabIndex = 14;
+            this.btnSearchStudent.Text = "Search";
+            this.btnSearchStudent.UseVisualStyleBackColor = false;
+            this.btnSearchStudent.Click += new System.EventHandler(this.btnSearchStudent_Click);
             // 
             // StudentLookupPage
             // 
@@ -84,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnFoundStudent);
+            this.Controls.Add(this.btnSearchStudent);
             this.Controls.Add(this.boxFindStudent);
             this.Controls.Add(this.btnStudentLookBacktoHome);
             this.Controls.Add(this.lblFindStudent);
@@ -100,6 +102,6 @@
         private System.Windows.Forms.Label lblFindStudent;
         private System.Windows.Forms.Button btnStudentLookBacktoHome;
         private System.Windows.Forms.TextBox boxFindStudent;
-        private System.Windows.Forms.Button btnFoundStudent;
+        private System.Windows.Forms.Button btnSearchStudent;
     }
 }

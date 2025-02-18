@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblNewReferral = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.boxRefEnter = new System.Windows.Forms.TextBox();
             this.txtEnterRefNum = new System.Windows.Forms.Label();
             this.lblEnterDate = new System.Windows.Forms.Label();
             this.txtDateIssued = new System.Windows.Forms.TextBox();
@@ -55,12 +55,12 @@
             this.lblNewReferral.TabIndex = 6;
             this.lblNewReferral.Text = "New Referral";
             // 
-            // textBox1
+            // boxRefEnter
             // 
-            this.textBox1.Location = new System.Drawing.Point(250, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 7;
+            this.boxRefEnter.Location = new System.Drawing.Point(250, 134);
+            this.boxRefEnter.Name = "boxRefEnter";
+            this.boxRefEnter.Size = new System.Drawing.Size(204, 20);
+            this.boxRefEnter.TabIndex = 7;
             // 
             // txtEnterRefNum
             // 
@@ -204,9 +204,9 @@
             this.Controls.Add(this.txtDateIssued);
             this.Controls.Add(this.lblEnterDate);
             this.Controls.Add(this.txtEnterRefNum);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxRefEnter);
             this.Controls.Add(this.lblNewReferral);
-            
+            this.Name = "CreateReferralPage";
             this.Text = "CreateReferralPage";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,7 +216,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblNewReferral;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox boxRefEnter;
         private System.Windows.Forms.Label txtEnterRefNum;
         private System.Windows.Forms.Label lblEnterDate;
         private System.Windows.Forms.TextBox txtDateIssued;

@@ -15,6 +15,10 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         public StudentViewerPage()
         {
             InitializeComponent();
+            if (StudentLookupPage.isEmpty)
+            {
+                lblNoStuFound.Visible = true;
+            }
         }
 
         private void tblStudentReport_Paint(object sender, PaintEventArgs e)
@@ -26,6 +30,11 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         {
             new HomePage().Show(); 
             Hide();
+        }
+
+        private void lblNoStuFound_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,7 +22,9 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         public string Reason { get; set; }
         public static string Intv { get; set; }
 
-        private string JsonFilePath;
+        public static string JsonFilePath { get; set; }
+
+
 
         public static string FinalText;
         public static string FINALTEXT;
@@ -52,7 +54,7 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             new FinalTextPage().Show();
             Hide();
             name = this.txtFirstLastName.Text;
-            RefNum = this.txtEnterRefNum.Text;
+            RefNum = this.boxRefEnter.Text;
             DateIss = this.txtDateIssued.Text;
             Reason = this.txtReason.Text;
             Intv = this.txtIntervention.Text;
@@ -67,21 +69,23 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             };
             if (Intv == "Y")
             {
-                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason + " Invervention has been handled by the teacher already. ";
+                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason + ". Invervention has been handled by the teacher already. ";
                 Console.WriteLine(FinalText);
             }
             else
             {
-                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason;
+                FinalText = "The student " + name + " is receiving a referral for the following reason: " + Reason + ".";
                 Console.WriteLine(FinalText);
             }
             FINALTEXT = FinalText;
+            JsonFilePath = "C:\\Users\\s324051\\Documents\\REFERRAL DATA\\" + name + ".json";
+            using (StreamWriter file = File.CreateText(JsonFilePath))
 
-            //using (StreamWriter file = File.CreateText(@"c:\"+ name + ".json"))
-            // {
-            //     JsonSerializer serializer = new JsonSerializer();
-            //     serializer.Serialize(file, STUDENT);
-            // }
+
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, STUDENT);
+            }
 
 
         }
