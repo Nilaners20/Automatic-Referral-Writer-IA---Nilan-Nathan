@@ -18,7 +18,10 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
     {
         public static string query { get; set; } 
         public static Boolean isEmpty { get; set; }
+
+        public static string REPORT;
         public StudentLookupPage()
+
         {
             InitializeComponent();
         }
@@ -35,13 +38,13 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             query = boxFindStudent.Text;
             try
             {
-                string REPORT = (File.ReadAllText("C:\\Users\\s324051\\Documents\\REFERRAL DATA\\" + query + ".json"));
+                 REPORT = (File.ReadAllText("C:\\Users\\s324051\\Documents\\REFERRAL DATA\\" + query + ".json"));
 
             }
             catch (FileNotFoundException)
             {
                 isEmpty = true;
-                string REPORT = null;
+                REPORT = null;
             }
             new StudentViewerPage().Show();
 

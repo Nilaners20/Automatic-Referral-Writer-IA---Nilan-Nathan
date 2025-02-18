@@ -21,10 +21,6 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             }
         }
 
-        private void tblStudentReport_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnStudentRepBacktoHome_Click(object sender, EventArgs e)
         {
@@ -35,6 +31,11 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         private void lblNoStuFound_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtRepView_TextChanged(object sender, EventArgs e)
+        {
+            txtRepView.Text = StudentLookupPage.REPORT;
         }
     }
 }

@@ -53,7 +53,7 @@
             this.txtFinalText.Name = "txtFinalText";
             this.txtFinalText.Size = new System.Drawing.Size(650, 295);
             this.txtFinalText.TabIndex = 8;
-            this.txtFinalText.Text = "";
+            this.txtFinalText.Text = "Press any key to see your referral text.";
             this.txtFinalText.TextChanged += new System.EventHandler(this.txtFinalText_TextChanged);
             // 
             // btnFinalTextBackToHome
