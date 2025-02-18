@@ -18,7 +18,11 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
             if (StudentLookupPage.isEmpty)
             {
                 lblNoStuFound.Visible = true;
+                lblStudentName.Visible = false;
+                txtRepView.Visible = false;
+                StudentLookupPage.isEmpty = false;
             }
+
         }
 
 
@@ -36,6 +40,11 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
         private void txtRepView_TextChanged(object sender, EventArgs e)
         {
             txtRepView.Text = StudentLookupPage.REPORT;
+        }
+
+        private void lblStudentName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

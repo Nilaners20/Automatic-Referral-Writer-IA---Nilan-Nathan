@@ -44,6 +44,7 @@
             this.lblStudentName.Size = new System.Drawing.Size(477, 83);
             this.lblStudentName.TabIndex = 5;
             this.lblStudentName.Text = "Student Name";
+            this.lblStudentName.Click += new System.EventHandler(this.lblStudentName_Click);
             // 
             // btnStudentRepBacktoHome
             // 

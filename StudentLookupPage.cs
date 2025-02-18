@@ -47,6 +47,7 @@ namespace Automatic_Referral_Writer_IA___Nilan_Nathan
                 REPORT = null;
             }
             new StudentViewerPage().Show();
+            Hide();
 
 
         }
